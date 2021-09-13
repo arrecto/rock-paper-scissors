@@ -3,8 +3,39 @@
     <head>
         <meta charset="utf-8">
         <title>Rock, Paper, Scissors Game</title>
-    </head>
-    <body>
+        <link rel="stylesheet" href="style.css">
         <script src="scripts/script.js"></script>
+    </head>
+    <body class="body">
+        <div id='container'>
+        <div class='title-page' id="title-page">Rock, Paper, and Scissors</div>
+        <button id='play-button'>PLAY</button>
+
+            <div class='comparing-container'>
+                <div id='player-choice'>
+                    <p class="player">Player</p>
+                    <div class="square"></div>
+                    <p class="weapon"></p>
+                </div>
+
+                <div id='computer-choice'>
+                    <p class="player">Computer</p>
+                    <div class="square"></div>
+                    <p class="weapon"></p>
+                </div>
+            </div>
+
+            <div class='score-container'>
+                <div class='score-design' id='player-score'>
+                        <p>Player Score: </p>
+                        <p class='score'></p>
+                    </div>
+        
+                    <div class='score-design' id='computer-score'>
+                        <p>Computer Score: </p>
+                        <p class='score'></p>
+                    </div>
+            </div>
+        </div>
     </body>
 </html>

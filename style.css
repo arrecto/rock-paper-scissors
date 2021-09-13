@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
+.body {
+    background-image: url('images/blue-wavy-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.562);
+    border-radius: 10px;
+}
+
+.comparing-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.title-page {
+    
+    font-family: 'Bubblegum Sans', cursive;
+    text-align: center;
+    font-size: 50px;
+    color:rgb(41, 138, 141);
+    -webkit-text-stroke: 1px rgb(13, 53, 54);
+
+}
+
+.player {
+    text-align: center;
+    letter-spacing: 0.1em;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 20px;
+}
+
+.square {
+    height: 150px;
+    width: 150px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.score-design {
+    display: flex;
+}
+
+.score-container {
+    display: flex;
+    margin: 1em auto;
+}
+#play-button {
+    font-family: 'Balsamiq Sans', cursive;
+    font-weight: 700;
+    background-color: rgb(95, 187, 135);
+    font-size: 17px;
+    letter-spacing: 0.2em;
+    color:rgb(13, 53, 54);
+    width: 100px;
+    height: 2em;
+    margin: 2em auto;
+    border-radius: 15px;
+    border-color: rgb(13, 53, 54);
+}
+
+#play-button:hover {
+    box-shadow: 0 0 15px rgba(55, 149, 204, 0.959);
+}
