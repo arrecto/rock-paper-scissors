@@ -50,4 +50,4 @@ else alert('It\'s a tie');
 playerDecision = prompt('Do you want to play again? yes/no');
 playerDecision = playerDecision.toLowerCase();
 }
-console.log('Thank you for playing!')
+console.log('Thank you for playing!');
