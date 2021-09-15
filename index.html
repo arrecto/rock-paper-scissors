@@ -4,38 +4,60 @@
         <meta charset="utf-8">
         <title>Rock, Paper, Scissors Game</title>
         <link rel="stylesheet" href="style.css">
-        <script src="scripts/script.js"></script>
     </head>
     <body class="body">
         <div id='container'>
         <div class='title-page' id="title-page">Rock, Paper, and Scissors</div>
-        <button id='play-button'>PLAY</button>
+        <button type="button" id='play-button'>PLAY</button>
 
             <div class='comparing-container'>
-                <div id='player-choice'>
+                <div class="choice-container" id='player-choice'>
                     <p class="player">Player</p>
-                    <div class="square"></div>
+                    <div class="square" id='player-choice-container'></div>
                     <p class="weapon"></p>
                 </div>
 
-                <div id='computer-choice'>
+                <div id='round-container' class="round">
+                    <p class="round-number"></p>
+                </div>
+
+                <div class="choice-container" id='computer-choice'>
                     <p class="player">Computer</p>
-                    <div class="square"></div>
+                    <div class="square" id="computer-choice-container"></div>
                     <p class="weapon"></p>
                 </div>
+
             </div>
 
             <div class='score-container'>
                 <div class='score-design' id='player-score'>
-                        <p>Player Score: </p>
-                        <p class='score'></p>
+                        <p>Player Score: &nbsp&nbsp</p>
+                        <p class='score' id='player-current-score'></p>
                     </div>
         
                     <div class='score-design' id='computer-score'>
-                        <p>Computer Score: </p>
-                        <p class='score'></p>
+                        <p>Computer Score: &nbsp&nbsp</p>
+                        <p class='score' id='computer-current-score'></p>
                     </div>
             </div>
+
+            <p id="label-select-weapon">select a weapon</p>
+
+            <div id='weapon-container'>
+                <div class='weapon' id='rock-container'>
+                    <img class="img-weapon" src="images/rock.jpg" alt="rock" id="rock">
+                    <p class="weapon-label">rock</p>
+                </div>
+                <div class='weapon' id='paper-container'>
+                    <img class="img-weapon" src="images/paper.jpg" alt="paper" id="paper">
+                    <p class="weapon-label">paper</p>
+                </div>
+                <div class='weapon' id='scissors-container'>
+                    <img class="img-weapon" src="images/scissors.jpg" alt="scissors" id="scissors">
+                    <p class="weapon-label">scissors</p>
+                </div>
+            </div>
         </div>
+        <script src="scripts/script.js"></script>
     </body>
 </html>

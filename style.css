@@ -18,7 +18,7 @@
 
 .comparing-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .title-page {
@@ -41,18 +41,31 @@
 .square {
     height: 150px;
     width: 150px;
+    margin-top: -10%;
     background-color: rgb(255, 255, 255);
     border-radius: 10px;
 }
 
 .score-design {
     display: flex;
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 20px;
+    margin-top: -20px;
 }
 
 .score-container {
     display: flex;
-    margin: 1em auto;
 }
+
+div#player-score {
+    margin-left: 25%;
+}
+
+div#computer-score {
+    margin-left: 18%;
+}
+
+
 #play-button {
     font-family: 'Balsamiq Sans', cursive;
     font-weight: 700;
@@ -62,11 +75,74 @@
     color:rgb(13, 53, 54);
     width: 100px;
     height: 2em;
-    margin: 2em auto;
+    margin: 1em auto 0% auto;
     border-radius: 15px;
     border-color: rgb(13, 53, 54);
 }
 
 #play-button:hover {
     box-shadow: 0 0 15px rgba(55, 149, 204, 0.959);
+}
+
+.round {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 8% 10px auto 10px;
+}
+
+.round-active {
+    text-align: center;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 85px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: 8% 10px auto 0px;
+    background-color: rgba(218, 189, 24, 0.767);
+    box-shadow: 0 0 3px black;
+}
+
+#label-select-weapon{
+    margin: auto;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 25px;
+}
+#weapon-container {
+    display: flex;
+    justify-content: center;
+}
+
+.weapon {
+    margin: 20px 10px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-weapon {
+    width: 150px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgb(22, 22, 48);
+    transition: all .07s ease;
+}
+
+.img-weapon:hover {
+    transform: scale(1.1) ;
+    box-shadow: 5px 5px 5px rgb(138, 139, 45);
+}
+
+.weapon-label {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 20px;
+    margin-top: 3%;
+}
+
+.player-weapon {
+    height: 150px;
+    width: 150px;
+    margin-top: -10%;
+    /*background: url('images/paper.jpg');*/
+    background-size: 150px 150px;
+    border-radius: 10px;
 }

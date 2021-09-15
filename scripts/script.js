@@ -1,3 +1,90 @@
+const playButton = document.querySelector('#play-button');
+const weapons = document.querySelectorAll('.img-weapon');
+const playerContainer = document.querySelector('div#player-choice-container');
+const computerContainer = document.querySelector('div#computer-choice-container');
+const roundContainer = document.querySelector('p.round-number');
+const playerCurrentScore = document.querySelector('p#player-current-score');
+const computerCurrentScore = document.querySelector('p#computer-current-score');
+
+let computerWeapon, playerWeapon;
+let playerScore = computerScore = 0;
+let round = 1;
+
+
+function compareWithComputer(e)
+{
+    if(round<=5)
+    {    playerWeapon = e.path[0].id;
+        //putting the selected picture into the container;
+        playerContainer.className = "player-weapon";
+        playerContainer.style.background = `url(images/${playerWeapon}.jpg)`;
+        playerContainer.style.backgroundSize = '150px 150px';
+
+        computerChoice();
+
+        if (computerWeapon=='rock'&&playerWeapon=='paper'||
+            computerWeapon=='paper'&&playerWeapon=='scissors'||
+            computerWeapon=='scissors'&&playerWeapon=='rock'){
+                playerScore++;
+                playerCurrentScore.textContent=playerScore.toString();
+            }
+            else if (computerWeapon=='paper'&&playerWeapon=='rock'||
+                    computerWeapon=='scissors'&&playerWeapon=='paper'||
+                    computerWeapon=='rock'&&playerWeapon=='scissors'){
+                computerScore++;
+                computerCurrentScore.textContent=computerScore.toString();
+            }
+        
+        roundContainer.className = "round-active";
+        roundContainer.textContent = round.toString();
+
+        if (computerWeapon!=playerWeapon) round++;
+    }
+    if(round>5)
+    {
+        let winner = (playerScore>computerScore ? 'You' : 'Computer');
+        alert(`Winner: ${winner}\nPress 'PLAY' to play again.`);
+    }
+}
+
+function computerChoice() {
+    let x= Math.floor(Math.random()*10/3.3);
+    if (x==0) computerWeapon = "rock";
+    else computerWeapon = (x==1 ? 'paper' : 'scissors');
+
+    console.log(computerWeapon, x);
+    computerContainer.className = "player-weapon";
+    computerContainer.style.background = `url(images/${computerWeapon}.jpg)`;
+    computerContainer.style.backgroundSize = '150px 150px';
+}
+
+function playerDecision(){
+    console.log('playgame done');
+    for(i=0;i<weapons.length;i++){
+        weapons[i].addEventListener('click', compareWithComputer);
+    }
+
+    round=1;
+    playerScore = computerScore = 0;
+    playerCurrentScore.textContent='0';
+    computerCurrentScore.textContent='0';
+    roundContainer.textContent = '';
+}
+
+playButton.addEventListener('click', playerDecision);
+
+
+    
+
+
+
+
+
+
+
+
+
+/*
 let playerDecision='yes';
 let playerScore = 0, computerScore = 0;
 
@@ -51,3 +138,5 @@ playerDecision = prompt('Do you want to play again? yes/no');
 playerDecision = playerDecision.toLowerCase();
 }
 console.log('Thank you for playing!');
+
+*/
